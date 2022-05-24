@@ -6,7 +6,7 @@ public abstract class Vehicle {
 	private double basePrice;
 	private double sellPrice;
 	private String trademark;
-	private String model;
+	private int model;
 	private String cilinderCapacity;
 	private String km;
 	private String licensePlate;
@@ -15,7 +15,7 @@ public abstract class Vehicle {
 	private Document [] documents;
 	
 	//methods
-	public Vehicle(boolean alreadyUsed, double basePrice, double sellPrice, String trademark, String model,
+	public Vehicle(boolean alreadyUsed, double basePrice, double sellPrice, String trademark, int model,
 			String cilinderCapacity, String km, String licensePlate, String soatNumber,double soatPrice,
 	        int soatYear,String soatImage,String technoNum, int technoYear,String tehnoImage) {
 		this.alreadyUsed = alreadyUsed;
@@ -63,11 +63,11 @@ public abstract class Vehicle {
 		this.trademark = trademark;
 	}
 
-	public String getModel() {
+	public int getModel() {
 		return model;
 	}
 
-	public void setModel(String model) {
+	public void setModel(int model) {
 		this.model = model;
 	}
 
@@ -106,7 +106,6 @@ public abstract class Vehicle {
 	public Soat soat(String soatNumber, double soatPrice, int soatYear, String soatImage){
 	            Soat soat = new Soat(soatNumber,soatPrice, soatYear, soatImage);
 	            return soat;
-
 	    }
 
 	    public Technomechanic techno(String technoNumber, int technoYear,
@@ -120,4 +119,12 @@ public abstract class Vehicle {
 	                    +cilinderCapacity +"\nKilometers:" +km +"\nMark:" +trademark +"\nModel:" +model +"\nPlaca:"
 	                    +licensePlate +"\nSellPrice:" +sellPrice);
 	        }
+	    
+	    public String document() {
+	    	String message = "";
+	        for (int i = 0; i < documents.length-1; i++) {
+	            message = message+documents[i].toString();
+	        }
+	        return message;
+	    }
 }

@@ -10,7 +10,7 @@ public class Motorcycle extends Vehicle {
 	private MotorcycleType motorcycleType;
 
 	//methods
-	public Motorcycle(boolean alreadyUsed, double basePrice, double sellPrice, String trademark, String model,
+	public Motorcycle(boolean alreadyUsed, double basePrice, double sellPrice, String trademark, int model,
 			String cilinderCapacity, String km, String licensePlate, String gasolineCapacity, String gasolineConsume,
 			int motorcycleTyp, String soatNumber,double soatPrice, int soatYear, String soatImage,
 			String technoNum, int technoYear,String tehnoImage) {

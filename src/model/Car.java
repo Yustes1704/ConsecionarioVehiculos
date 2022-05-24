@@ -10,7 +10,7 @@ public class Car extends Vehicle {
 	private Polaryzed polaryzed;
 		
 	//methods
-	public Car(boolean alreadyUsed, double basePrice, double sellPrice, String trademark, String model,
+	public Car(boolean alreadyUsed, double basePrice, double sellPrice, String trademark, int model,
 			String cilinderCapacity, String km, String licensePlate, String numDoors, int carTyp,
 			int polaryze, String soatNumber,double soatPrice, int soatYear, String soatImage, String technoNum, 
 			int technoYear,String technoImage) {
